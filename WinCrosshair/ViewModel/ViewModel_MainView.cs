@@ -3,9 +3,9 @@ using System.ComponentModel;
 
 namespace WinCrosshair.ViewModel
 {
-    public class ViewModel_MainView : INotifyPropertyChanged
+    public class ViewModel_MainView : ViewModel_Base
     {
-        public event PropertyChangedEventHandler? PropertyChanged;
+
 
 
 

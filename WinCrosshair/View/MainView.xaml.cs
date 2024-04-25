@@ -58,9 +58,18 @@ namespace WinCrosshair.View
         {
             InitializeComponent();
             this.DataContext = this;
-            toppingWindow.Show();
+
+            this.Loaded += MainView_Loaded;
+
 
         }
 
+        private void MainView_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (!Application.Current.MainWindow.IsActive)
+                return;
+
+            toppingWindow.Show();
+        }
     }
 }

@@ -11,6 +11,8 @@ namespace WinCrosshair.View.Windows
     public partial class ToppingWindow : Window
     {
         System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+
+
         #region NVVM
         public static readonly DependencyProperty closingProperty;
         public static readonly DependencyProperty positionProperty;
@@ -72,10 +74,23 @@ namespace WinCrosshair.View.Windows
         public ToppingWindow()
         {
             InitializeComponent();
+            this.Loaded += ToppingWindow_Loaded;
+        }
+
+        private void ToppingWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+
+
+
+
+
+
+
             dispatcherTimer.Tick += DispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
             dispatcherTimer.Start();
         }
+
         Random R = new Random();
         private void DispatcherTimer_Tick(object? sender, EventArgs e)
         {
