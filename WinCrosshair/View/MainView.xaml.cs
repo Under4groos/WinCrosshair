@@ -58,8 +58,8 @@ namespace WinCrosshair.View
         {
             InitializeComponent();
             this.DataContext = this;
-
             toppingWindow.Show();
+
         }
 
     }

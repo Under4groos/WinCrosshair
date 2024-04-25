@@ -19,8 +19,29 @@ extern "C" __declspec(dllexport) bool _SetWindowPosG(HWND hWnd)
 {
     return ___setpos(hWnd , HWND_TOPMOST, SWP_NOMOVE | SWP_NOREPOSITION | SWP_NOSIZE);
 }
+ 
 
 
+
+
+
+extern "C" __declspec(dllexport) void _MakeTransparent(HWND hWnd)
+{
+    long long__ = GetWindowLong(hWnd, -20);
+    SetWindowLong(hWnd, -20, long__ | 0x20);
+}
+extern "C" __declspec(dllexport) void _MakeNormal(HWND hWnd)
+{
+    long long__ = GetWindowLong(hWnd, -20);
+    SetWindowLong(hWnd, -20, long__ | -33);
+}
+
+extern "C" __declspec(dllexport) void _HideWin_Tab(HWND hWnd)
+{
+    long long__ = GetWindowLong(hWnd, -20);
+    long__ |= 0x00000080;
+    SetWindowLong(hWnd, -20,  long__);
+}
 
 
 

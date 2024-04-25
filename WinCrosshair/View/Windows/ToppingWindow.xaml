@@ -8,10 +8,10 @@
         Title="ToppingWindow" Height="100" Width="100"
         AllowsTransparency="True"
         WindowStyle="None"
-        
+        ShowInTaskbar="False"
         >
     <Window.Background>
-        <SolidColorBrush Color="#1a1a1a" Opacity="0.5"/>
+        <SolidColorBrush Color="red" Opacity="0.9"/>
     </Window.Background>
     <Grid>
         
